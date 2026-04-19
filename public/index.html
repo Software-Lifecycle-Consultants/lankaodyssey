@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lanka Odyssey | Ancient Kingdoms Edition</title>
+    <meta
+      name="description"
+      content="A 7-day unsupported ultra-cycling odyssey across Sri Lanka with mandatory daily checkpoint cut-offs and live rider tracking."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="home">
+      <nav class="top-nav">
+        <div class="brand">Lanka Odyssey</div>
+        <div class="menu">
+          <a href="#event">The Event</a>
+          <a href="#route">Route</a>
+          <a href="#rules">Rules</a>
+          <a href="#register">Register</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <p class="kicker">Ancient Kingdoms Edition</p>
+        <h1>Ride the Ancient Kingdoms of Sri Lanka.</h1>
+        <p class="subheadline">
+          A 7-day unsupported ultra-cycling odyssey from Negombo to Galle, across sacred cities,
+          fortress routes, and unforgiving roads.
+        </p>
+
+        <div class="stats-row">
+          <div><strong>7</strong><span>Days</span></div>
+          <div><strong>~2000 KM</strong><span>Target Distance</span></div>
+          <div><strong>Daily</strong><span>Checkpoint Cut-offs</span></div>
+          <div><strong>Live</strong><span>GPS Tracking</span></div>
+          <div><strong>Negombo -> Galle</strong><span>Start to Finish</span></div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#register">Apply Now</a>
+          <a class="btn btn-outline" href="#route">Explore the Route</a>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+    </header>
+
+    <main>
+      <section class="section value-grid" id="event">
+        <article>
+          <h3>Unsupported</h3>
+          <p>
+            Once the ride begins, you are on your own. No private support, no race caravan, no easy exits.
+          </p>
+        </article>
+        <article>
+          <h3>Daily Survival Clock</h3>
+          <p>
+            Every day has a mandatory checkpoint and fixed cut-off time. Reach it, or your official ride ends.
+          </p>
+        </article>
+        <article>
+          <h3>Ancient Kingdoms Route</h3>
+          <p>
+            The route threads through the royal and cultural spine of Sri Lanka, ending on the southern coast.
+          </p>
+        </article>
+        <article>
+          <h3>Live Dot-Watching</h3>
+          <p>
+            Every official rider carries a GPS tracker so family, friends, and spectators can follow in real time.
+          </p>
+        </article>
+      </section>
+
+      <section class="section split" id="route">
+        <div>
+          <h2>Route Concept</h2>
+          <p>
+            The route is not a single painted line. It is a chain of compulsory places. Between checkpoints,
+            riders decide their own path.
+          </p>
+          <ul>
+            <li>Negombo (Start)</li>
+            <li>Panduwasnuwara</li>
+            <li>Dambadeniya</li>
+            <li>Yapahuwa</li>
+            <li>Kurunegala</li>
+            <li>Anuradhapura</li>
+            <li>Polonnaruwa</li>
+            <li>Sigiriya / Dambulla Zone</li>
+            <li>Kandy</li>
+            <li>Southern Corridor</li>
+            <li>South Coast</li>
+            <li>Galle (Finish)</li>
+          </ul>
+        </div>
+        <aside class="callout">
+          <h3>Late August 2026</h3>
+          <p>Limited field. Applications are reviewed before confirmation.</p>
+          <a class="btn btn-primary" href="#register">Apply for 2026 Edition</a>
+        </aside>
+      </section>
+
+      <section class="section" id="rules">
+        <h2>Core Rules</h2>
+        <div class="rules-grid">
+          <p>Every rider must pass each day’s mandatory checkpoint before cut-off.</p>
+          <p>Live tracker must stay active throughout the event.</p>
+          <p>No unauthorized outside support if unsupported rules are enforced.</p>
+          <p>Riders must obey local traffic laws and emergency protocols.</p>
+          <p>Missing cut-off, missing checkpoints, or tracker tampering can trigger DQ.</p>
+          <p>Classification outcomes: Finisher, DNF, DQ.</p>
+        </div>
+      </section>
+
+      <section class="section register" id="register">
+        <h2>Earn your place on the line.</h2>
+        <p class="section-copy">
+          Application-first flow: submit details, get organizer review, then complete payment on acceptance.
+          For now, this page includes sample Stripe payment actions for registration and add-ons.
+        </p>
+
+        <form id="checkout-form" class="checkout-form">
+          <label>
+            Rider name
+            <input type="text" name="riderName" placeholder="Full name" required />
+          </label>
+          <label>
+            Rider email
+            <input type="email" name="riderEmail" placeholder="you@example.com" required />
+          </label>
+          <fieldset>
+            <legend>Select payment item</legend>
+            <label><input type="radio" name="productKey" value="registration" checked /> Base Registration (USD 250)</label>
+            <label><input type="radio" name="productKey" value="trackerRental" /> Tracker Rental (USD 50)</label>
+            <label><input type="radio" name="productKey" value="galleTransfer" /> Galle Transfer (USD 70)</label>
+          </fieldset>
+          <button class="btn btn-primary" type="submit">Continue to Secure Checkout</button>
+          <p id="checkout-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="section" id="faq">
+        <h2>FAQ</h2>
+        <div class="faq-grid">
+          <article>
+            <h3>Is this a race?</h3>
+            <p>It is designed as an unsupported odyssey focused on legal completion within official time limits.</p>
+          </article>
+          <article>
+            <h3>Can I choose my own route?</h3>
+            <p>Yes, between mandatory checkpoints. No, regarding the checkpoint locations themselves.</p>
+          </article>
+          <article>
+            <h3>Is live tracking mandatory?</h3>
+            <p>Yes. Every official rider must use an approved live tracker throughout the event.</p>
+          </article>
+          <article>
+            <h3>Can I register instantly?</h3>
+            <p>No. Applications are reviewed before confirmation and payment.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact">
+      <h2>Think you belong on the start line?</h2>
+      <p>Email: hello@lankaodyssey.com | riders@lankaodyssey.com | partners@lankaodyssey.com</p>
+      <small>© 2026 Lanka Odyssey. Ancient Kingdoms Edition.</small>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
