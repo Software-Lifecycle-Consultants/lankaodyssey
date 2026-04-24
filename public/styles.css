@@ -534,7 +534,7 @@ ul, ol { margin: 0; padding: 0; }
 .checkout-form {
   display: grid; gap: 0.9rem;
 }
-.checkout-form label {
+.checkout-form > label {
   display: grid; gap: 0.4rem;
   font-size: 0.88rem; font-weight: 600;
   color: #2a4255;
