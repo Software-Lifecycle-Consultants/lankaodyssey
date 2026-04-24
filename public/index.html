@@ -3,180 +3,331 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lanka Odyssey | Ancient Kingdoms Edition</title>
+    <title>Lanka Odyssey | Ancient Kingdoms Edition 2026</title>
     <meta
       name="description"
-      content="A 7-day unsupported ultra-cycling odyssey across Sri Lanka with mandatory daily checkpoint cut-offs and live rider tracking."
+      content="A 7-day unsupported ultra-cycling odyssey across Sri Lanka's Ancient Kingdom corridor — Negombo to Galle, daily cut-offs, live GPS tracking."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Manrope:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Outfit:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+
+    <!-- Announcement bar -->
+    <div class="announce-bar">
+      <span class="announce-dot" aria-hidden="true"></span>
+      Applications open &nbsp;·&nbsp; August 2026 &nbsp;·&nbsp; 40 rider limit
+      <a href="#register">Apply now →</a>
+    </div>
+
     <header class="hero" id="home">
       <nav class="top-nav">
-        <div class="brand">Lanka Odyssey</div>
+        <div class="brand">
+          <svg class="brand-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.6"/>
+            <line x1="2.5" y1="12" x2="8.5" y2="12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="15.5" y1="12" x2="21.5" y2="12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          Lanka Odyssey
+        </div>
         <div class="menu">
-          <a href="#event">The Event</a>
+          <a href="#event">Event</a>
+          <a href="#stages">Stages</a>
           <a href="#route">Route</a>
           <a href="#rules">Rules</a>
           <a href="#register">Register</a>
           <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
         </div>
       </nav>
 
       <div class="hero-content">
-        <p class="kicker">Ancient Kingdoms Edition</p>
-        <h1>Ride the Ancient Kingdoms of Sri Lanka.</h1>
+        <p class="kicker">
+          <span class="kicker-pill">Ancient Kingdoms Edition</span>
+          August 2026 &nbsp;·&nbsp; Sri Lanka
+        </p>
+        <h1>Ride Sri Lanka's<br>Ancient Kingdom<br>Corridor.</h1>
         <p class="subheadline">
-          A 7-day unsupported ultra-cycling odyssey from Negombo to Galle, across sacred cities,
-          fortress routes, and unforgiving roads.
+          2,000 km. 7 days. No support. No shortcuts.<br>
+          Navigate the royal spine of the island from the west coast to the Indian Ocean — or the clock cuts you out.
         </p>
 
-        <div class="stats-row">
-          <div><strong>7</strong><span>Days</span></div>
-          <div><strong>~2000 KM</strong><span>Target Distance</span></div>
-          <div><strong>Daily</strong><span>Checkpoint Cut-offs</span></div>
-          <div><strong>Live</strong><span>GPS Tracking</span></div>
-          <div><strong>Negombo -> Galle</strong><span>Start to Finish</span></div>
+        <ul class="stat-strip" role="list">
+          <li><strong>~2,000</strong><span>Kilometres</span></li>
+          <li><strong>7</strong><span>Days</span></li>
+          <li><strong>12</strong><span>Checkpoints</span></li>
+          <li><strong>40</strong><span>Rider Limit</span></li>
+          <li><strong>Live</strong><span>GPS Tracking</span></li>
+        </ul>
+
+        <div class="effort-tags" aria-label="Challenge profile">
+          <span>Tropical Heat</span>
+          <span>Jungle Climbs</span>
+          <span>Self-Supported</span>
+          <span>Kingdom Spine</span>
+          <span>5 UNESCO Sites</span>
         </div>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#register">Apply Now</a>
-          <a class="btn btn-outline" href="#route">Explore the Route</a>
+          <a class="btn btn-primary" href="#register">Apply for a Place</a>
+          <a class="btn btn-outline" href="#stages">See the Stages</a>
         </div>
       </div>
-      <div class="hero-overlay"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
     </header>
 
     <main>
-      <section class="section value-grid" id="event">
-        <article>
-          <h3>Unsupported</h3>
-          <p>
-            Once the ride begins, you are on your own. No private support, no race caravan, no easy exits.
-          </p>
-        </article>
-        <article>
-          <h3>Daily Survival Clock</h3>
-          <p>
-            Every day has a mandatory checkpoint and fixed cut-off time. Reach it, or your official ride ends.
-          </p>
-        </article>
-        <article>
-          <h3>Ancient Kingdoms Route</h3>
-          <p>
-            The route threads through the royal and cultural spine of Sri Lanka, ending on the southern coast.
-          </p>
-        </article>
-        <article>
-          <h3>Live Dot-Watching</h3>
-          <p>
-            Every official rider carries a GPS tracker so family, friends, and spectators can follow in real time.
-          </p>
-        </article>
-      </section>
 
-      <section class="section split" id="route">
-        <div>
-          <h2>Route Concept</h2>
-          <p>
-            The route is not a single painted line. It is a chain of compulsory places. Between checkpoints,
-            riders decide their own path.
-          </p>
-          <ul>
-            <li>Negombo (Start)</li>
-            <li>Panduwasnuwara</li>
-            <li>Dambadeniya</li>
-            <li>Yapahuwa</li>
-            <li>Kurunegala</li>
-            <li>Anuradhapura</li>
-            <li>Polonnaruwa</li>
-            <li>Sigiriya / Dambulla Zone</li>
-            <li>Kandy</li>
-            <li>Southern Corridor</li>
-            <li>South Coast</li>
-            <li>Galle (Finish)</li>
-          </ul>
+      <!-- Event DNA -->
+      <section class="section" id="event">
+        <div class="section-header">
+          <p class="eyebrow">Event DNA</p>
+          <h2>Built for the deeply committed.</h2>
+          <p class="section-lead">Lanka Odyssey is not a race you enter on a whim. It is a self-navigated endurance challenge across one of the world's most culturally and topographically intense island interiors.</p>
         </div>
-        <aside class="callout">
-          <h3>Late August 2026</h3>
-          <p>Limited field. Applications are reviewed before confirmation.</p>
-          <a class="btn btn-primary" href="#register">Apply for 2026 Edition</a>
-        </aside>
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
+            </div>
+            <h3>Self-Navigated</h3>
+            <p>The checkpoints are fixed. The path between them is yours. Plan, adapt, and push through using your own judgement — there is no route sheet handed to you.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Daily Cut-off Clock</h3>
+            <p>Every day has a compulsory checkpoint and a fixed cut-off time. Arrive late and your official ride is over. Pace, fuel, and sleep decisions carry real consequences.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Fully Unsupported</h3>
+            <p>No team cars. No drop bags. No private support crew. Riders source food, water, lodging, and mechanical help from whatever resources the road provides.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" fill="currentColor"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Live GPS Dot-Watch</h3>
+            <p>Every rider wears an approved live tracker from the start gun to the finish line. Your position streams in real time — family, friends, and spectators can follow every move.</p>
+          </article>
+        </div>
       </section>
 
-      <section class="section" id="rules">
-        <h2>Core Rules</h2>
+      <!-- 7-Day Stages -->
+      <section class="stages-section" id="stages">
+        <div class="section-header section" style="padding-bottom: 1.5rem;">
+          <p class="eyebrow">Stage Breakdown</p>
+          <h2>Seven days. Seven survival tests.</h2>
+        </div>
+        <div class="stages-scroll-wrap">
+          <div class="stages-scroll">
+            <div class="stage-card">
+              <span class="stage-day">Day 1</span>
+              <h4>West Coast Start</h4>
+              <p class="stage-loc">Negombo → Kurunegala</p>
+              <p class="stage-desc">Flat coastal roads give way to the first inland climbs. Establish your rhythm before the real Sri Lanka begins.</p>
+              <span class="stage-km">~220 km</span>
+            </div>
+            <div class="stage-card">
+              <span class="stage-day">Day 2</span>
+              <h4>Ancient Cities North</h4>
+              <p class="stage-loc">Kurunegala → Anuradhapura</p>
+              <p class="stage-desc">Sacred stupas and ancient tank systems line a route through Sri Lanka's oldest and most revered civilisations.</p>
+              <span class="stage-km">~180 km</span>
+            </div>
+            <div class="stage-card">
+              <span class="stage-day">Day 3</span>
+              <h4>Kingdom Spine</h4>
+              <p class="stage-loc">Anuradhapura → Polonnaruwa</p>
+              <p class="stage-desc">Ride through the dry zone under full tropical sun. Mandatory checkpoint at the UNESCO-listed Polonnaruwa ruins.</p>
+              <span class="stage-km">~145 km</span>
+            </div>
+            <div class="stage-card">
+              <span class="stage-day">Day 4</span>
+              <h4>Rock &amp; Jungle</h4>
+              <p class="stage-loc">Polonnaruwa → Sigiriya / Dambulla</p>
+              <p class="stage-desc">Dense jungle roads, punishing heat, and the Lion Rock looming on the horizon. The signature image of the whole odyssey.</p>
+              <span class="stage-km">~120 km</span>
+            </div>
+            <div class="stage-card">
+              <span class="stage-day">Day 5</span>
+              <h4>The Mountain Climb</h4>
+              <p class="stage-loc">Dambulla → Kandy</p>
+              <p class="stage-desc">The hardest elevation day. Tea-country gradients force riders into their lowest gears as the road winds toward the hill capital.</p>
+              <span class="stage-km">~150 km</span>
+            </div>
+            <div class="stage-card">
+              <span class="stage-day">Day 6</span>
+              <h4>Southern Descent</h4>
+              <p class="stage-loc">Kandy → South Corridor</p>
+              <p class="stage-desc">Out of the hills and into the southern plains. Your legs will be broken but the coast is now within reach. Keep the cadence.</p>
+              <span class="stage-km">~200 km</span>
+            </div>
+            <div class="stage-card stage-card--finish">
+              <span class="stage-day">Day 7</span>
+              <h4>Galle Finish</h4>
+              <p class="stage-loc">South Coast → Galle Fort</p>
+              <p class="stage-desc">The Indian Ocean is to your left. The Dutch Fort walls are your finish line. Everything has led to this final push.</p>
+              <span class="stage-km stage-km--finish">Finish</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Route Timeline -->
+      <section class="section" id="route">
+        <div class="route-wrap">
+          <div class="route-text">
+            <p class="eyebrow">Route Concept</p>
+            <h2>A chain of compulsory kingdoms.</h2>
+            <p>The route is not a GPX file you follow. It is a sequence of mandatory places — ancient capitals and strategic stops that define Sri Lanka's historical corridor. Between them, every path is your own decision.</p>
+            <div class="route-meta">
+              <div class="route-meta-item"><strong>Late August</strong><span>2026 Edition</span></div>
+              <div class="route-meta-item"><strong>40 Riders</strong><span>Field limit</span></div>
+              <div class="route-meta-item"><strong>4 UNESCO</strong><span>Sites on route</span></div>
+            </div>
+            <a class="btn btn-primary" href="#register">Apply for 2026</a>
+          </div>
+          <div class="route-timeline">
+            <ol class="timeline-list" role="list">
+              <li class="timeline-item timeline-item--start">
+                <span class="tl-dot"></span>
+                <span class="tl-label">Negombo<span class="tl-badge tl-badge--start">Start</span></span>
+              </li>
+              <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Panduwasnuwara<span class="tl-sub">Ancient capital ruins, 12th century</span></span></li>
+              <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Dambadeniya<span class="tl-sub">Medieval fortress kingdom</span></span></li>
+              <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Yapahuwa<span class="tl-sub">Rock fortress citadel</span></span></li>
+              <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Kurunegala</span></li>
+              <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Anuradhapura<span class="tl-sub">UNESCO — Sri Lanka's first capital</span></span></li>
+              <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Polonnaruwa<span class="tl-sub">UNESCO — Medieval royal city</span></span></li>
+              <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Sigiriya / Dambulla<span class="tl-sub">UNESCO — Lion Rock fortress</span></span></li>
+              <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Kandy<span class="tl-sub">UNESCO — Temple of the Tooth</span></span></li>
+              <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Southern Corridor</span></li>
+              <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">South Coast</span></li>
+              <li class="timeline-item timeline-item--finish">
+                <span class="tl-dot"></span>
+                <span class="tl-label">Galle<span class="tl-badge tl-badge--finish">Finish</span></span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rules -->
+      <section class="section rules-section" id="rules">
+        <div class="section-header">
+          <p class="eyebrow">Rulebook</p>
+          <h2>The rules are simple.<br>The execution is not.</h2>
+        </div>
         <div class="rules-grid">
-          <p>Every rider must pass each day’s mandatory checkpoint before cut-off.</p>
-          <p>Live tracker must stay active throughout the event.</p>
-          <p>No unauthorized outside support if unsupported rules are enforced.</p>
-          <p>Riders must obey local traffic laws and emergency protocols.</p>
-          <p>Missing cut-off, missing checkpoints, or tracker tampering can trigger DQ.</p>
-          <p>Classification outcomes: Finisher, DNF, DQ.</p>
+          <div class="rule-card"><span class="rule-num">01</span><p>Pass every mandatory checkpoint before the day's cut-off time or your official ride ends immediately.</p></div>
+          <div class="rule-card"><span class="rule-num">02</span><p>Your GPS tracker must remain active from the start gun to crossing the finish line. No exceptions.</p></div>
+          <div class="rule-card"><span class="rule-num">03</span><p>No private or unauthorised outside assistance. All food, water, and mechanical support must be sourced locally.</p></div>
+          <div class="rule-card"><span class="rule-num">04</span><p>Riders must comply with local traffic laws and follow all official emergency protocols at all times.</p></div>
+          <div class="rule-card"><span class="rule-num">05</span><p>Missing checkpoints, exceeding cut-offs, or GPS tampering result in immediate disqualification.</p></div>
+          <div class="rule-card"><span class="rule-num">06</span><p>Classification outcomes: Finisher, DNF, or DQ. Only legal completions within time limits earn the Finisher title.</p></div>
         </div>
       </section>
 
-      <section class="section register" id="register">
-        <h2>Earn your place on the line.</h2>
-        <p class="section-copy">
-          Application-first flow: submit details, get organizer review, then complete payment on acceptance.
-          For now, this page includes sample Stripe payment actions for registration and add-ons.
-        </p>
-
-        <form id="checkout-form" class="checkout-form">
-          <label>
-            Rider name
-            <input type="text" name="riderName" placeholder="Full name" required />
-          </label>
-          <label>
-            Rider email
-            <input type="email" name="riderEmail" placeholder="you@example.com" required />
-          </label>
-          <fieldset>
-            <legend>Select payment item</legend>
-            <label><input type="radio" name="productKey" value="registration" checked /> Base Registration (USD 250)</label>
-            <label><input type="radio" name="productKey" value="trackerRental" /> Tracker Rental (USD 50)</label>
-            <label><input type="radio" name="productKey" value="galleTransfer" /> Galle Transfer (USD 70)</label>
-          </fieldset>
-          <button class="btn btn-primary" type="submit">Continue to Secure Checkout</button>
-          <p id="checkout-message" aria-live="polite"></p>
-        </form>
+      <!-- Registration -->
+      <section class="section register-section" id="register">
+        <div class="register-wrap">
+          <div class="register-info">
+            <p class="eyebrow">Registration</p>
+            <h2>Earn your place on the start line.</h2>
+            <p class="section-lead">Lanka Odyssey uses an application-first process. Submit your details for organiser review. Accepted riders are invited to complete payment. Field is capped at 40.</p>
+            <ul class="register-checklist">
+              <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Application reviewed within 7 days</li>
+              <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Payment only on acceptance — no upfront risk</li>
+              <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Secure Stripe checkout — USD pricing</li>
+              <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>GPS tracker rental available at checkout</li>
+            </ul>
+          </div>
+          <div class="register-form-wrap">
+            <form id="checkout-form" class="checkout-form">
+              <label>Full name<input type="text" name="riderName" placeholder="Your full name" required /></label>
+              <label>Email address<input type="email" name="riderEmail" placeholder="you@example.com" required /></label>
+              <fieldset>
+                <legend>Select item</legend>
+                <label class="radio-option"><input type="radio" name="productKey" value="registration" checked /><span class="radio-label"><strong>Base Registration</strong><span class="radio-price">USD 250</span></span></label>
+                <label class="radio-option"><input type="radio" name="productKey" value="trackerRental" /><span class="radio-label"><strong>GPS Tracker Rental</strong><span class="radio-price">USD 50</span></span></label>
+                <label class="radio-option"><input type="radio" name="productKey" value="galleTransfer" /><span class="radio-label"><strong>Galle Finish Transfer</strong><span class="radio-price">USD 70</span></span></label>
+              </fieldset>
+              <button class="btn btn-primary btn-lg" type="submit">Continue to Secure Checkout</button>
+              <p id="checkout-message" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
       </section>
 
+      <!-- FAQ -->
       <section class="section" id="faq">
-        <h2>FAQ</h2>
-        <div class="faq-grid">
-          <article>
-            <h3>Is this a race?</h3>
-            <p>It is designed as an unsupported odyssey focused on legal completion within official time limits.</p>
-          </article>
-          <article>
-            <h3>Can I choose my own route?</h3>
-            <p>Yes, between mandatory checkpoints. No, regarding the checkpoint locations themselves.</p>
-          </article>
-          <article>
-            <h3>Is live tracking mandatory?</h3>
-            <p>Yes. Every official rider must use an approved live tracker throughout the event.</p>
-          </article>
-          <article>
-            <h3>Can I register instantly?</h3>
-            <p>No. Applications are reviewed before confirmation and payment.</p>
-          </article>
+        <div class="section-header">
+          <p class="eyebrow">FAQ</p>
+          <h2>Questions answered.</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-question">Is this a race?</summary>
+            <div class="faq-answer"><p>Lanka Odyssey is an unsupported endurance odyssey, not a traditional mass-start race. All riders share the same start window and daily cut-off clocks. Riders are ranked by completion status and overall elapsed time, but the primary goal is legal, self-supported completion within the time limit.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Can I choose my own route?</summary>
+            <div class="faq-answer"><p>Yes — between mandatory checkpoints the road is entirely yours. You decide how to connect the dots using any publicly accessible road. The checkpoint locations are fixed and non-negotiable. Everything else is your navigation decision.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Is GPS tracking mandatory?</summary>
+            <div class="faq-answer"><p>Yes. Every official rider must carry an approved GPS tracker from the moment they leave the start line until they cross the finish or officially retire. Extended signal loss or disabling the device will trigger an official inquiry and may result in disqualification.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">What is the entry process?</summary>
+            <div class="faq-answer"><p>Submit your application with rider details. The team reviews all submissions and contacts accepted riders with a secure payment link. Your place is not confirmed until payment is complete. The field is capped at 40 riders.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">What fitness level is required?</summary>
+            <div class="faq-answer"><p>Riders should have demonstrated back-to-back ultra-endurance performance on a bicycle. Experience with bikepacking, randonneuring, or ultra-cycling events is expected. The cut-offs are fixed and unforgiving — first-time long-distance riders are not recommended to apply.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">What bikes are allowed?</summary>
+            <div class="faq-answer"><p>Any human-powered bicycle is permitted. Road, gravel, and mountain bikes have all successfully completed similar events. The terrain varies significantly across the island — gravel tyre clearance and robust luggage solutions are strongly recommended.</p></div>
+          </details>
         </div>
       </section>
+
     </main>
 
     <footer class="footer" id="contact">
-      <h2>Think you belong on the start line?</h2>
-      <p>Email: hello@lankaodyssey.com | riders@lankaodyssey.com | partners@lankaodyssey.com</p>
-      <small>© 2026 Lanka Odyssey. Ancient Kingdoms Edition.</small>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <p class="footer-name">Lanka Odyssey</p>
+          <p class="footer-tag">Ancient Kingdoms Edition · August 2026</p>
+          <p class="footer-copy">© 2026 Lanka Odyssey. All rights reserved.</p>
+        </div>
+        <div class="footer-col">
+          <strong>Navigate</strong>
+          <a href="#event">The Event</a>
+          <a href="#stages">Stages</a>
+          <a href="#route">Route</a>
+          <a href="#rules">Rules</a>
+          <a href="#register">Register</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <strong>Contact</strong>
+          <a href="mailto:hello@lankaodyssey.com">hello@lankaodyssey.com</a>
+          <a href="mailto:riders@lankaodyssey.com">riders@lankaodyssey.com</a>
+          <a href="mailto:partners@lankaodyssey.com">partners@lankaodyssey.com</a>
+        </div>
+      </div>
     </footer>
 
     <script src="app.js"></script>
