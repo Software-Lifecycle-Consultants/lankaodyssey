@@ -15,23 +15,35 @@ const currency = (process.env.STRIPE_CURRENCY || "usd").toLowerCase();
 const baseUrl = process.env.BASE_URL || `http://localhost:${port}`;
 
 const catalog = {
-  registration: {
-    name: "Lanka Odyssey 2026 Registration",
-    description: "Ancient Kingdoms Edition base registration",
-    amountCents: 25000,
+  registrationWithTracker: {
+    name: "Lanka Odyssey 2026 – Registration + GPS Tracker",
+    description: "Event entry for the Ancient Kingdoms Edition. GPS tracker rental is mandatory and included. This is an unsupported event — no crew or outside assistance permitted.",
+    amountCents: 30000,
     envPriceKey: "STRIPE_PRICE_REGISTRATION"
-  },
-  trackerRental: {
-    name: "Tracker Rental",
-    description: "Mandatory GPS tracker rental",
-    amountCents: 5000,
-    envPriceKey: "STRIPE_PRICE_TRACKER_RENTAL"
   },
   galleTransfer: {
     name: "Galle to Airport Transfer",
-    description: "Rider + bike + luggage transfer",
+    description: "Rider + bike + luggage transfer from Galle Fort to Bandaranaike International Airport after the event.",
     amountCents: 7000,
     envPriceKey: "STRIPE_PRICE_GALLE_TRANSFER"
+  },
+  accomPackage: {
+    name: "Event Accommodation Package",
+    description: "4–5 star accommodation + 3 meals/day for all 7 nights. Managed bookings at or near each checkpoint.",
+    amountCents: 100000,
+    envPriceKey: "STRIPE_PRICE_ACCOM"
+  },
+  airportTransfer: {
+    name: "Airport Transfers (Colombo ↔ Negombo & Galle → Airport)",
+    description: "Arrival pickup + post-event return transfer with cycle and luggage.",
+    amountCents: 30000,
+    envPriceKey: "STRIPE_PRICE_AIRPORT_TRANSFER"
+  },
+  afterParty: {
+    name: "Finisher After-Party (Galle Fort)",
+    description: "Celebration dinner and awards ceremony at a venue inside Galle Fort on Day 7 evening.",
+    amountCents: 30000,
+    envPriceKey: "STRIPE_PRICE_AFTER_PARTY"
   }
 };
 
@@ -40,27 +52,53 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/api/create-checkout-session", async (req, res) => {
   try {
-    const { productKey, riderName, riderEmail } = req.body || {};
-    const product = catalog[productKey];
+    const { productKey, riderName, riderEmail, optionalKeys } = req.body || {};
 
-    if (!product) {
+    if (productKey !== "registrationWithTracker") {
       return res.status(400).json({ error: "Invalid product key." });
     }
 
-    const configuredPriceId = process.env[product.envPriceKey];
-    const lineItems = configuredPriceId
-      ? [{ price: configuredPriceId, quantity: 1 }]
-      : [{
-          price_data: {
-            currency,
-            product_data: {
-              name: product.name,
-              description: product.description
+    const mandatoryProduct = catalog.registrationWithTracker;
+    const configuredPriceId = process.env[mandatoryProduct.envPriceKey];
+
+    const lineItems = [
+      configuredPriceId
+        ? { price: configuredPriceId, quantity: 1 }
+        : {
+            price_data: {
+              currency,
+              product_data: {
+                name: mandatoryProduct.name,
+                description: mandatoryProduct.description
+              },
+              unit_amount: mandatoryProduct.amountCents
             },
-            unit_amount: product.amountCents
-          },
-          quantity: 1
-        }];
+            quantity: 1
+          }
+    ];
+
+    if (Array.isArray(optionalKeys)) {
+      for (const key of optionalKeys) {
+        const addonProduct = catalog[key];
+        if (!addonProduct) continue;
+        const addonPriceId = process.env[addonProduct.envPriceKey];
+        lineItems.push(
+          addonPriceId
+            ? { price: addonPriceId, quantity: 1 }
+            : {
+                price_data: {
+                  currency,
+                  product_data: {
+                    name: addonProduct.name,
+                    description: addonProduct.description
+                  },
+                  unit_amount: addonProduct.amountCents
+                },
+                quantity: 1
+              }
+        );
+      }
+    }
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
@@ -69,7 +107,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
       metadata: {
         productKey,
         riderName: riderName || "",
-        riderEmail: riderEmail || ""
+        riderEmail: riderEmail || "",
+        optionalKeys: Array.isArray(optionalKeys) ? optionalKeys.join(",") : ""
       },
       success_url: `${baseUrl}/success.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseUrl}/cancel.html`

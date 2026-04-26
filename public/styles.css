@@ -941,6 +941,86 @@ ul, ol { margin: 0; padding: 0; }
   line-height: 1.55;
 }
 
+/* ---- Unsupported Event Notice ---- */
+.unsupported-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-left: 4px solid #f59e0b;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  color: #92400e;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.unsupported-notice > span {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+.unsupported-notice p { margin: 0; }
+
+/* ---- Mandatory Registration Section ---- */
+.mandatory-section {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.85rem;
+  background: var(--foam);
+  display: grid;
+  gap: 0.5rem;
+}
+.mandatory-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+}
+.mandatory-item-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+.mandatory-required-badge {
+  display: inline-block;
+  background: #16a34a;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.15em 0.55em;
+}
+.mandatory-price {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--reef);
+  white-space: nowrap;
+}
+.mandatory-desc {
+  font-size: 0.8rem;
+  color: #6a8aa0;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ---- Checkout sub-note ---- */
+.checkout-sub-note {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #6a8aa0;
+  margin: 0.3rem 0 0;
+  line-height: 1.5;
+}
+
 /* =============================================
    PARTNERS SECTION
    ============================================= */
