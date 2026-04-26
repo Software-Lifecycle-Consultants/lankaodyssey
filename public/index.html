@@ -433,22 +433,11 @@
                   </div>
                 </div>
 
-                <!-- Galle Finish Transfer -->
-                <label class="addon-option" id="addon-galle-label">
-                  <input type="checkbox" id="addon-galle" name="addonGalle" />
-                  <span class="addon-label-text">
-                    <span class="addon-name">Galle Finish Transfer</span>
-                    <span class="addon-price">USD 70 / rider</span>
-                  </span>
-                </label>
-                <div class="addon-detail" id="detail-galle" hidden>
-                  <p>Rider, bicycle and luggage transfer from Galle Fort to Bandaranaike International Airport after the event.</p>
-                </div>
               </div>
 
               <!-- Merchandise -->
               <div class="merch-section">
-                <p class="addons-title">Merchandise <span class="addons-note">(reserve now, pay later)</span></p>
+                <p class="addons-title">Merchandise <span class="addons-note">(optional - purchase later)</span></p>
                 <div class="merch-grid">
                   <div class="merch-item">
                     <span class="merch-name">Official Event Jersey (short sleeve)</span>
@@ -646,7 +635,6 @@
           { checkId: 'addon-accom',    detailId: 'detail-accom' },
           { checkId: 'addon-transfer', detailId: 'detail-transfer' },
           { checkId: 'addon-party',    detailId: 'detail-party' },
-          { checkId: 'addon-galle',    detailId: 'detail-galle' },
         ];
         addons.forEach(function (a) {
           var cb = document.getElementById(a.checkId);

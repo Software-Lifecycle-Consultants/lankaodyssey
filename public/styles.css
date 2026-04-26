@@ -255,9 +255,9 @@ ul, ol { margin: 0; padding: 0; }
    SECTION UTILITIES
    ============================================= */
 .section {
-  width: min(1140px, calc(100% - 2rem));
+  width: min(1140px, 100%);
   margin-inline: auto;
-  padding: 72px 0;
+  padding: 72px 1.5rem;
 }
 .section-header { margin-bottom: 2.4rem; }
 .section-header h2 { margin-bottom: 0.6rem; }
@@ -388,6 +388,13 @@ ul, ol { margin: 0; padding: 0; }
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: start;
+}
+.route-timeline {
+  max-height: 520px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+  padding-right: 0.5rem;
 }
 .route-text { padding-top: 0.5rem; }
 .route-text p { color: #3a5570; margin-bottom: 1.4rem; }
