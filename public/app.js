@@ -5,10 +5,22 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   message.textContent = "Preparing secure checkout...";
 
+  const addonMap = {
+    addonAccom:    "accomPackage",
+    addonTransfer: "airportTransfer",
+    addonGalle:    "galleTransfer",
+    addonParty:    "afterParty"
+  };
+
+  const optionalKeys = Object.entries(addonMap)
+    .filter(([fieldName]) => form[fieldName] && form[fieldName].checked)
+    .map(([, catalogKey]) => catalogKey);
+
   const payload = {
-    riderName: form.riderName.value.trim(),
-    riderEmail: form.riderEmail.value.trim(),
-    productKey: form.productKey.value
+    riderName:   form.riderName.value.trim(),
+    riderEmail:  form.riderEmail.value.trim(),
+    productKey:  form.productKey.value,
+    optionalKeys
   };
 
   try {

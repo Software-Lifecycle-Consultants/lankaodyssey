@@ -158,12 +158,12 @@
               <span class="stage-day">Day 3</span>
               <h4>Dry Zone Crossing</h4>
               <p class="stage-loc">Trincomalee → Anuradhapura</p>
-              <p class="stage-desc">Cross the scorched dry zone interior to Sri Lanka's ancient first capital. The distance is short but the heat is absolute. Recover, refuel, and prepare for the kingdoms ahead.</p>
+              <p class="stage-desc">Head inland along the A6/A11 elephant country spine through Habarana and the Minneriya elephant corridor. Minneriya National Park borders the road — elephants graze the reservoir margins at dusk. Arrive at Sri Lanka's ancient first capital before the cut-off.</p>
               <div class="stage-times">
                 <span class="stage-time-badge"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M8 4.5v3.5l2 1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Start 07:00</span>
-                <span class="stage-time-badge stage-time-badge--cutoff"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v6l3.5 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/></svg>Cut-off 18:00</span>
+                <span class="stage-time-badge stage-time-badge--cutoff"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v6l3.5 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/></svg>Cut-off 20:00</span>
               </div>
-              <span class="stage-km">~165 km</span>
+              <span class="stage-km">~200 km</span>
             </div>
             <div class="stage-card">
               <span class="stage-day">Day 4</span>
@@ -242,7 +242,7 @@
               <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Kilinochchi<span class="tl-sub">Northern corridor checkpoint</span></span></li>
               <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Mullaitivu<span class="tl-sub">Northeast coast</span></span></li>
               <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Trincomalee<span class="tl-sub">Deep-water harbour — Day 2 cut-off</span></span></li>
-              <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Vavuniya<span class="tl-sub">Northern interior dry zone</span></span></li>
+              <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Habarana / Minneriya<span class="tl-sub">Elephant corridor &amp; Minneriya reservoir</span></span></li>
               <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Anuradhapura<span class="tl-sub">UNESCO — Sri Lanka's first capital — Day 3 cut-off</span></span></li>
               <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Yapahuwa<span class="tl-sub">Rock fortress citadel</span></span></li>
               <li class="timeline-item"><span class="tl-dot"></span><span class="tl-label">Kurunegala<span class="tl-sub">Medieval capital</span></span></li>
@@ -344,19 +344,30 @@
               <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Application reviewed within 7 days</li>
               <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Payment only on acceptance — no upfront risk</li>
               <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Secure Stripe checkout — USD pricing</li>
-              <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>GPS tracker rental available at checkout</li>
+              <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>GPS tracker rental included — mandatory for all riders</li>
             </ul>
           </div>
           <div class="register-form-wrap">
             <form id="checkout-form" class="checkout-form">
               <label>Full name<input type="text" name="riderName" placeholder="Your full name" required /></label>
               <label>Email address<input type="email" name="riderEmail" placeholder="you@example.com" required /></label>
-              <fieldset>
-                <legend>Select item</legend>
-                <label class="radio-option"><input type="radio" name="productKey" value="registration" checked /><span class="radio-label"><strong>Base Registration</strong><span class="radio-price">USD 250</span></span></label>
-                <label class="radio-option"><input type="radio" name="productKey" value="trackerRental" /><span class="radio-label"><strong>GPS Tracker Rental</strong><span class="radio-price">USD 50</span></span></label>
-                <label class="radio-option"><input type="radio" name="productKey" value="galleTransfer" /><span class="radio-label"><strong>Galle Finish Transfer</strong><span class="radio-price">USD 70</span></span></label>
-              </fieldset>
+              <div class="unsupported-notice" role="alert">
+                <span aria-hidden="true">⚠</span>
+                <p><strong>This is an unsupported event.</strong> No crew, drop bags, team cars, or private outside assistance is permitted at any stage. All food, water, lodging, and mechanical support must be sourced independently from local resources along the route.</p>
+              </div>
+
+              <div class="mandatory-section">
+                <p class="addons-title">Mandatory registration fee</p>
+                <div class="mandatory-item">
+                  <span class="mandatory-item-name">
+                    <strong>Event Registration + GPS Tracker Rental</strong>
+                    <span class="mandatory-required-badge">Required</span>
+                  </span>
+                  <span class="mandatory-price">USD 300</span>
+                </div>
+                <p class="mandatory-desc">GPS tracker rental is mandatory — your tracker must remain active from start gun to finish line or you will be disqualified. Field capped at 40 riders.</p>
+                <input type="hidden" name="productKey" value="registrationWithTracker" />
+              </div>
 
               <!-- Optional Add-ons -->
               <div class="addons-section">
@@ -421,6 +432,18 @@
                     </label>
                   </div>
                 </div>
+
+                <!-- Galle Finish Transfer -->
+                <label class="addon-option" id="addon-galle-label">
+                  <input type="checkbox" id="addon-galle" name="addonGalle" />
+                  <span class="addon-label-text">
+                    <span class="addon-name">Galle Finish Transfer</span>
+                    <span class="addon-price">USD 70 / rider</span>
+                  </span>
+                </label>
+                <div class="addon-detail" id="detail-galle" hidden>
+                  <p>Rider, bicycle and luggage transfer from Galle Fort to Bandaranaike International Airport after the event.</p>
+                </div>
               </div>
 
               <!-- Merchandise -->
@@ -452,6 +475,7 @@
               </div>
 
               <button class="btn btn-primary btn-lg" type="submit">Continue to Secure Checkout</button>
+              <p class="checkout-sub-note">Registration + GPS Tracker (USD 300) is charged at checkout. Selected optional add-ons are added to the same session.</p>
               <p id="checkout-message" aria-live="polite"></p>
             </form>
           </div>
@@ -622,6 +646,7 @@
           { checkId: 'addon-accom',    detailId: 'detail-accom' },
           { checkId: 'addon-transfer', detailId: 'detail-transfer' },
           { checkId: 'addon-party',    detailId: 'detail-party' },
+          { checkId: 'addon-galle',    detailId: 'detail-galle' },
         ];
         addons.forEach(function (a) {
           var cb = document.getElementById(a.checkId);
