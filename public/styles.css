@@ -732,6 +732,321 @@ ul, ol { margin: 0; padding: 0; }
   .rules-grid { grid-template-columns: 1fr; }
 }
 
+/* =============================================
+   STAGE TIMES
+   ============================================= */
+.stage-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0 0.75rem;
+}
+.stage-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--ice);
+  color: var(--reef);
+  border: 1px solid var(--line);
+}
+.stage-time-badge svg { width: 12px; height: 12px; flex-shrink: 0; }
+.stage-time-badge--cutoff {
+  background: rgba(230, 80, 50, 0.08);
+  color: #c03a20;
+  border-color: rgba(200, 80, 50, 0.2);
+}
+.stage-time-badge--light {
+  background: rgba(255,255,255,.18);
+  color: #d0eeff;
+  border-color: rgba(255,255,255,.25);
+}
+.stage-time-badge--finish {
+  background: rgba(255,255,255,.2);
+  color: #80d4b8;
+  border-color: rgba(120,220,180,.35);
+}
+
+/* =============================================
+   TERRAIN SECTION
+   ============================================= */
+.terrain-section {
+  background:
+    radial-gradient(circle at 5% 80%, rgba(45,126,74,.07), transparent 40%),
+    radial-gradient(circle at 90% 20%, rgba(17,101,160,.07), transparent 40%),
+    var(--foam);
+}
+.terrain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.terrain-card {
+  border-radius: 18px;
+  padding: 1.4rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 20px rgba(14,50,80,.07);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.terrain-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(14,50,80,.12);
+}
+.terrain-icon {
+  width: 42px; height: 42px;
+  border-radius: 12px;
+  display: grid; place-items: center;
+  margin-bottom: 0.9rem;
+  background: linear-gradient(135deg, #deeeff, #dbf5eb);
+  color: var(--lagoon);
+}
+.terrain-icon svg { width: 22px; height: 22px; }
+.terrain-card h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+.terrain-card p { font-size: 0.9rem; color: #3a5570; margin: 0; line-height: 1.6; }
+
+/* =============================================
+   REGISTRATION ADD-ONS
+   ============================================= */
+.addons-section {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.85rem;
+  background: var(--foam);
+  display: grid;
+  gap: 0;
+}
+.addons-title {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #2a4255;
+  margin: 0 0 0.65rem;
+}
+.addons-note {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #6a8aa0;
+}
+.addon-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  cursor: pointer;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: background 150ms, border-color 150ms;
+}
+.addon-option:has(input:checked) {
+  background: var(--ice);
+  border-color: var(--reef);
+}
+.addon-option input[type="checkbox"] {
+  accent-color: var(--reef);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+.addon-label-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.addon-name { font-size: 0.88rem; font-weight: 600; color: #1e3a4f; }
+.addon-price { font-size: 0.82rem; font-weight: 700; color: var(--reef); white-space: nowrap; }
+.addon-detail {
+  margin: 0 0.6rem 0.5rem 2rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: 8px;
+  background: rgba(238,247,255,.8);
+  border-left: 3px solid var(--reef);
+}
+.addon-detail p {
+  font-size: 0.85rem;
+  color: #2e4c62;
+  margin: 0 0 0.6rem;
+  line-height: 1.55;
+}
+.addon-detail p:last-child { margin-bottom: 0; }
+.addon-guests { margin-top: 0.5rem; }
+.addon-guest-label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2a4255;
+}
+.addon-guest-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.addon-num-input {
+  width: 70px;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  font-family: "Outfit", sans-serif;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.addon-num-input:focus-visible {
+  outline: none;
+  border-color: var(--reef);
+  box-shadow: 0 0 0 3px rgba(17,101,160,.15);
+}
+.addon-discount-note {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--tea);
+}
+
+/* Merchandise */
+.merch-section {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.85rem;
+  background: var(--foam);
+}
+.merch-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.merch-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.55rem 0.5rem;
+  border-bottom: 1px solid var(--line);
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.merch-item:last-child { border-bottom: none; }
+.merch-name { font-size: 0.86rem; font-weight: 500; color: #2a3e52; }
+.merch-price { font-size: 0.82rem; font-weight: 700; color: var(--reef); white-space: nowrap; }
+.merch-item--free .merch-name { color: var(--tea); }
+.merch-free { color: var(--tea) !important; }
+.merch-note {
+  font-size: 0.8rem;
+  color: #6a8aa0;
+  margin: 0.6rem 0 0;
+  line-height: 1.55;
+}
+
+/* =============================================
+   PARTNERS SECTION
+   ============================================= */
+.partners-section {
+  background: var(--foam);
+}
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.partner-slot {
+  border-radius: 16px;
+  padding: 1.6rem 1.2rem;
+  background: var(--white);
+  border: 2px dashed var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  min-height: 120px;
+  justify-content: center;
+  transition: border-color 200ms;
+}
+.partner-slot:hover { border-color: var(--reef); }
+.partner-slot--title {
+  grid-column: 1 / -1;
+  background: linear-gradient(145deg, #f0f8ff, #e8f5f0);
+  border-style: solid;
+  border-color: var(--line);
+  min-height: 140px;
+}
+.partner-slot--cta {
+  background: linear-gradient(145deg, #eef7ff, #e8f0f8);
+  border-style: solid;
+  border-color: var(--reef);
+}
+.partner-slot--cta a { color: var(--reef); text-decoration: underline; text-underline-offset: 2px; }
+.partner-placeholder-label {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #7a9ab8;
+}
+.partner-slot--title .partner-placeholder-label { font-size: 1.3rem; color: var(--reef); }
+.partner-placeholder-desc { font-size: 0.82rem; color: #8aabbc; margin: 0; line-height: 1.5; }
+
+/* =============================================
+   DISCLAIMER SECTION
+   ============================================= */
+.disclaimer-section {
+  background:
+    linear-gradient(160deg, #fff8f0 0%, #fff4ee 100%);
+  border-top: 3px solid #e8724a;
+  border-radius: 0;
+}
+.disclaimer-inner {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1.8rem;
+  align-items: start;
+}
+.disclaimer-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fde4d8, #fdd8c8);
+  color: #c03a20;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-top: 0.4rem;
+}
+.disclaimer-icon svg { width: 26px; height: 26px; }
+.disclaimer-body .eyebrow { color: #c03a20; }
+.disclaimer-body h2 { margin-bottom: 1.2rem; color: #7a1a08; }
+.disclaimer-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.disclaimer-block {
+  padding: 1rem;
+  background: rgba(255,255,255,.7);
+  border-radius: 12px;
+  border: 1px solid rgba(220,100,60,.18);
+}
+.disclaimer-block h4 {
+  color: #8a2210;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+.disclaimer-block p {
+  font-size: 0.86rem;
+  color: #4a3020;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .disclaimer-inner { grid-template-columns: 1fr; }
+  .disclaimer-icon { display: none; }
+}
+
 /* EOF */
 /*REMOVE_FROM_HERE .stats-row {
   display: grid;
